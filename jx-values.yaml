@@ -1,0 +1,87 @@
+jxRequirements:
+  autoUpdate:
+    enabled: false
+    schedule: ""
+  bootConfigURL: https://github.com/jenkins-x/jx3-boot-config
+  buildPacks:
+    buildPackLibrary:
+      gitRef: master
+      gitURL: https://github.com/jenkins-x/jxr-packs-kubernetes.git
+  cluster:
+    clusterName: pr-1187-3-bdd-gke
+    devEnvApprovers:
+    - todo
+    environmentGitOwner: cb-kubecd
+    gitKind: github
+    gitName: github
+    gitServer: https://github.com
+    gke:
+      projectNumber: "688875092189"
+    namespace: jx
+    project: jenkins-x-labs-bdd
+    provider: gke
+    registry: gcr.io
+    zone: europe-west1-c
+  environments:
+  - ingress:
+      domain: ""
+      externalDNS: false
+      namespaceSubDomain: ""
+      tls:
+        email: ""
+        enabled: false
+        production: false
+    key: dev
+    owner: cb-kubecd
+    repository: env-pr-1187-3-bdd-gke-dev
+  - ingress:
+      domain: ""
+      externalDNS: false
+      namespaceSubDomain: ""
+      tls:
+        email: ""
+        enabled: false
+        production: false
+    key: staging
+  - ingress:
+      domain: ""
+      externalDNS: false
+      namespaceSubDomain: ""
+      tls:
+        email: ""
+        enabled: false
+        production: false
+    key: production
+  gitops: true
+  ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  kaniko: true
+  repository: nexus
+  secretStorage: vault
+  storage:
+    backup:
+      enabled: false
+      url: ""
+    logs:
+      enabled: false
+      url: ""
+    reports:
+      enabled: false
+      url: ""
+    repository:
+      enabled: false
+      url: ""
+  vault: {}
+  velero:
+    schedule: ""
+    ttl: ""
+  versionStream:
+    ref: 93deaebaf83054034ccab4d237699ef48148c2e6
+    url: https://github.com/jenkins-x-labs-bot/jxr-versions.git
+  webhook: lighthouse
