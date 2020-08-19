@@ -64,9 +64,11 @@ data:
         - needs-rebase
         repos:
         - cb-kubecd/env-pr-1187-3-bdd-gke-dev
-      target_url: http://deck-jx.35.195.160.110.nip.io
+      target_url: http://deck-jx.
 kind: ConfigMap
 metadata:
   creationTimestamp: null
   name: config
   namespace: jx
+  labels:
+    gitops.jenkins-x.io/pipeline: 'environment'
