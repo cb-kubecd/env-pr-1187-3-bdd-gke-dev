@@ -7,6 +7,7 @@ buildPacks:
     gitRef: master
     gitURL: https://github.com/jenkins-x/jxr-packs-kubernetes.git
 cluster:
+  clusterName: pr-1187-3-bdd-gke
   devEnvApprovers:
   - todo
   environmentGitOwner: cb-kubecd
@@ -14,8 +15,10 @@ cluster:
   gitName: github
   gitServer: https://github.com
   namespace: jx
+  project: jenkins-x-labs-bdd
   provider: gke
   registry: gcr.io
+  zone: europe-west1-c
 environments:
 - ingress:
     domain: ""
