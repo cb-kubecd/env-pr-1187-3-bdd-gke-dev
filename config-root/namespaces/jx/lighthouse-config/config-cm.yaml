@@ -64,7 +64,7 @@ data:
         - needs-rebase
         repos:
         - cb-kubecd/env-pr-1187-3-bdd-gke-dev
-      target_url: http://deck-jx.
+      target_url: http://deck-jx.35.195.160.110.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null
